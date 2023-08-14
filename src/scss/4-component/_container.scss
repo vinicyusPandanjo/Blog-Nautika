@@ -1,0 +1,105 @@
+.container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'top-page top-page top-page top-page'
+        'grid-main grid-main grid-main sidebar'
+        'last-grid last-grid last-grid last-grid';
+
+
+    @include device(md) {
+        grid-template-areas:
+            'top-page top-page top-page top-page'
+            'grid-main grid-main grid-main grid-main'
+            'last-grid last-grid last-grid last-grid'
+            'sidebar sidebar sidebar sidebar';
+
+    }
+
+    // @media screen and (max-width: 400px) {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+
+
+    .title-section {
+        margin-top: 40px;
+        grid-area: top-page;
+    }
+
+    .grid-main {
+        width: 100%;
+        grid-area: grid-main;
+
+        @include device(l) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @include device(md) {
+            margin-bottom: 50px;
+        }
+
+        @include device(sm) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+
+
+        }
+
+    }
+
+    .last-grid {
+        width: 100%;
+        max-width: 1100px;
+        grid-area: last-grid;
+        margin-top: 70px;
+
+        @include device(md) {
+            margin: 0;
+            margin-bottom: 50px;
+        }
+
+        &.see-too,
+        &.webstories {
+            @media screen and (max-width: 1138px) {
+                width: 95vw;
+
+                .slick-slider .slick-arrow.slick-next {
+                    right: -1%;
+                }
+
+                .slick-slider .slick-arrow.slick-prev {
+                    left: -1%;
+                    z-index: 1;
+                }
+            }
+
+            @include device(sm) {
+                width: 88vw;
+
+                .slick-slider {
+                    .col {
+                        width: 260px;
+                    }
+                }
+            }
+        }
+
+        &.webstories {
+            @media screen and (max-width: 1138px) {
+                width: 93vw;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,258 @@
+.header {
+
+    width: 100%;
+    @include flex(row, space-between, center);
+    flex-direction: column;
+
+    .btn-link {
+        @include button(170px, 43px, 1px solid $cores-nautika-primria-amarelo, $cores-nautika-cinza-escuro, $cores-nautika-primria-amarelo, 5px, 16px, normal);
+        text-transform: uppercase;
+        @include flex(row, center, center);
+        font-family: Mundial;
+        font-weight: 600;
+        background-image: linear-gradient(-60deg, transparent, transparent 40%,
+                #ffffff44 40%, #ffffff44 60%, transparent 60%,
+                transparent 100%);
+
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        background-position-x: 150%;
+
+        &:hover {
+            background-position-x: -150%;
+            transition: background-position-x 1s;
+        }
+
+
+
+
+    }
+
+
+    .header-top {
+        padding: 0 20px;
+        width: 100%;
+        @include flex(row, space-between, center);
+        flex-direction: row;
+        max-width: 1140px;
+        margin: 22px 0;
+
+        @include device(md) {
+            flex-direction: column-reverse;
+        }
+
+        .btn-link {
+            @include device(md) {
+                display: none;
+            }
+        }
+
+        .form_container {
+            @include flex(row, space-between, center);
+            width: 356px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid $cores-nautika-cinza-escuro;
+
+            @include device(md) {
+                width: 100%;
+
+            }
+
+            #search-form {
+                height: 100%;
+                flex: 1;
+                padding: 16px;
+                border-radius: 5px;
+
+                font-family: Mundial;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+            }
+
+            .search-button {
+                height: 29px;
+                padding: 0 8px;
+                background-color: #fff;
+
+                border-left: 1px solid #E3E3E3;
+            }
+        }
+
+        .container_menu {
+
+
+            @include device(md) {
+                margin-bottom: 25px;
+                width: 100%;
+
+                @include flex(row, space-between, center);
+                gap: 62px;
+
+
+            }
+
+            @include device (sm) {
+                justify-content: flex-start;
+
+                .logo-link {
+                    margin: 0 auto;
+                }
+            }
+
+            .menu-hamburger {
+                display: none;
+
+                @include device(md) {
+                    display: block;
+                }
+
+                background: transparent;
+            }
+        }
+
+
+    }
+
+    .menu-desk {
+        width: 100%;
+        @include flex(row, center, center);
+        background-color: $cores-nautika-primria-amarelo;
+        padding: 0 20px;
+
+        @include device(md) {
+            display: none;
+        }
+
+        .itens {
+
+            width: min(1100px, 100%);
+            @include flex(row, center, center);
+            gap: 70px;
+
+            .item {
+                .item-link {
+                    @include flex(row, center, center);
+                    gap: 8px;
+                    font-family: Mundial;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    color: $cores-nautika-primria-preto;
+                    text-transform: uppercase;
+                    padding: 17px 0;
+
+                    transition: 0.25s ease;
+
+                    border-top: 4px solid $cores-nautika-primria-amarelo;
+                    border-bottom: 4px solid $cores-nautika-primria-amarelo;
+
+                    &:hover {
+                        border-color: $cores-nautika-primria-preto;
+                        transition: 0.25s ease;
+                        padding: 6px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-mobile {
+        position: absolute;
+        background-color: $cores-nautika-cinza-claro-background;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        visibility: hidden;
+        right: 120%;
+        transition: 0.25s ease;
+
+        &.active {
+            visibility: visible;
+            right: 0;
+            transition: 0.25s ease;
+        }
+
+        @include flex(column, center, center);
+
+        .header-menu__mobile {
+            @include flex(column, center, center);
+            gap: 24px;
+            width: 100%;
+            position: relative;
+
+            .btn-link {
+                font-size: 14px;
+                width: 160px;
+                height: 40px;
+            }
+
+            .close-menu {
+                background: transparent;
+                position: absolute;
+                top: -5px;
+                right: 0;
+            }
+        }
+
+        .items-menu {
+
+            @include flex(column, center, center);
+            margin-top: 40px;
+            width: 100%;
+
+            .item-menu_link {
+                width: 100%;
+
+
+                @include flex(row, center, center);
+                gap: 8px;
+                font-family: Mundial;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                padding: 20px 0;
+                border-top: 1px solid #FF9A00;
+                color: $cores-nautika-primria-preto;
+
+                &:last-child {
+
+
+                    border-bottom: 1px solid #FF9A00;
+                }
+            }
+        }
+
+        .menu-footer_social {
+            width: 100%;
+            margin-top: auto;
+            @include flex(column, center, center);
+
+            .menu-mobile_text {
+                text-align: center;
+                font-family: Mundial;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                color: $cores-nautika-primria-preto;
+                margin-bottom: 16px;
+            }
+
+            .link-menu_social {
+                @include flex(row, center, center);
+                gap: 24px;
+            }
+        }
+    }
+}

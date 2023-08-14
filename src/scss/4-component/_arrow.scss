@@ -1,0 +1,24 @@
+.slick-slider .slick-arrow.slick-prev {
+
+    background: url("/src/image/arrow_left.svg") 0 0 / 100% no-repeat;
+
+    left: -4%;
+
+    &::before {
+        content: "";
+    }
+}
+
+.slick-slider .slick-arrow.slick-next {
+    background: url("/src/image/arrow_right.svg") 0 0 / 100% no-repeat;
+
+    right: -4%;
+
+    &::before {
+        content: "";
+    }
+}
+
+.slick-slider .slick-arrow.slick-disabled {
+    opacity: 1;
+}

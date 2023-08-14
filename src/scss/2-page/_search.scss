@@ -1,0 +1,13 @@
+.search {
+    .main {
+        .title-section {
+            @include flex(row,
+                flex-start,
+                center);
+
+            img {
+                margin-right: 16px;
+            }
+        }
+    }
+}

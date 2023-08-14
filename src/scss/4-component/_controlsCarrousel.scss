@@ -1,0 +1,49 @@
+.slick-slider .slick-slide {
+    margin: 0 8px;
+}
+
+.slick-slider .slick-list {
+    margin: 0 -8px;
+}
+
+.card__sidebar-body-content.article__most-read {
+    .slick-list {
+        margin: 0;
+    }
+}
+
+.slick-slider .slick-dots {
+
+    width: 100%;
+
+    li {
+        margin: 0;
+        width: 15px;
+        height: 10px;
+
+        margin-right: 8px;
+
+
+
+        button {
+            background-color: $cores-nautika-primria-amarelo;
+            margin: 0;
+            width: 15px;
+            height: 10px;
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+
+            &:before {
+                content: "";
+            }
+        }
+
+        &.slick-active {
+            width: 30px;
+
+            button {
+                width: 30px;
+            }
+        }
+    }
+}

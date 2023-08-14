@@ -1,0 +1,34 @@
+.flag {
+
+    border-radius: 10px 0px;
+    padding: 12px;
+
+    text-align: center;
+    font-family: Henriette;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $cores-nautika-primaria-branco;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    &__camping {
+        background-color: $cores-nautika-secundria-laranja;
+    }
+
+    &__adventure {
+        background-color: $cores-nautika-secundria-marrom;
+    }
+
+    &__tactic {
+        background-color: $cores-nautika-secundria-verde-escuro;
+    }
+
+    &__fishing {
+        background-color: $cores-nautika-secundria-azul-escuro;
+    }
+
+}

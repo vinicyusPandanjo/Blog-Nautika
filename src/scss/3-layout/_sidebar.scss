@@ -1,0 +1,151 @@
+.sidebar {
+    width: 100%;
+    grid-area: sidebar;
+    padding-left: 55px;
+
+    @include device(l) {
+        padding-left: 15px;
+    }
+
+    @include device(md) {
+        padding-left: 0;
+        margin-bottom: 80px;
+    }
+
+
+
+    .card__sidebar {
+        margin-bottom: 40px;
+
+        @include device(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__sidebar-banner {
+        margin-bottom: 40px;
+
+        @include device(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    grid-template-areas: "social"
+    "products"
+    "register"
+    "banner"
+    "void";
+
+
+    &.sidebar__article {
+        grid-template-areas:
+            "social"
+            "most-read"
+            "products"
+            "register"
+            "banner"
+            "void";
+        display: flex;
+        flex-direction: column;
+
+        .most-read {
+            grid-area: most-read;
+            max-height: 481px;
+
+            @include device(md) {
+
+                max-width: 350px;
+            }
+
+            @include device(sm) {
+                margin: 0 auto;
+                height: auto;
+                width: 350px;
+                margin-bottom: 50px;
+
+                .slick-dots {
+                    bottom: -50px;
+                }
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 86vw;
+
+            }
+
+            .card__sidebar-header {
+
+                @include device(sm) {
+                    background: $cores-nautika-cinza-claro-background;
+                    padding: 0;
+                    text-align: left;
+                    padding-bottom: 16px;
+                    font-size: 2rem;
+                    display: block;
+                }
+            }
+        }
+
+        @include device(md) {
+            grid-template-areas:
+                "most-read register"
+                "products banner";
+
+            display: grid;
+            padding: 0;
+            gap: 16px;
+        }
+
+        @include device(sm) {
+            display: grid;
+            grid-template-areas:
+                "most-read most-read"
+                "register register"
+                "products banner";
+
+
+
+        }
+    }
+
+    .social {
+        grid-area: social;
+
+        max-height: 122px;
+
+        @include device(md) {
+            display: none;
+        }
+
+    }
+
+    .products {
+        grid-area: products;
+        max-height: 386px;
+
+    }
+
+    .register {
+        grid-area: register;
+        max-height: 301px;
+
+        @include device(md) {
+
+            max-width: 350px;
+            max-height: 481px;
+        }
+
+    }
+
+    .banner {
+        grid-area: banner;
+        max-height: 258px;
+
+    }
+
+    .void {
+        grid-area: void;
+
+    }
+
+}

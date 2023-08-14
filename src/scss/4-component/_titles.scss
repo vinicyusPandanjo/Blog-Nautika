@@ -1,0 +1,29 @@
+.title-section {
+    color: $cores-nautika-primria-preto;
+    font-family: Henriette;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 32px;
+
+    @include device(sm) {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    span {
+        color: $cores-nautika-primria-preto;
+        font-family: Henriette;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 5px;
+
+        @include device(sm) {
+            font-size: 2rem;
+        }
+
+    }
+}

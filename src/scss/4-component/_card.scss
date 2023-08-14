@@ -1,0 +1,473 @@
+.col-container {
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 16px;
+
+    .col {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+
+
+    }
+
+    .card {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $cores-nautika-primaria-branco;
+        border-radius: 10px;
+        padding-bottom: 8px;
+
+        .emphasis-item {
+            .emphasis-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__sub {
+            padding: 8px 16px;
+
+            small {
+                font-family: Mundial;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        &__item {
+
+            padding: 8px 16px;
+
+            h2 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                font-family: Henriette;
+                color: $cores-nautika-primria-preto;
+            }
+
+            p {
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                color: $cores-nautika-primria-preto;
+                line-height: 150%;
+            }
+
+            small {
+                font-family: Mundial;
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+            }
+        }
+
+        .flexible {
+            flex-grow: 1;
+        }
+    }
+}
+
+.blog-card {
+    display: grid;
+    background-color: $cores-nautika-primaria-branco;
+    margin-bottom: 24px;
+    gap: 16px;
+    grid-template-columns: 263px 1fr;
+    border-radius: 10px;
+    max-width: 821px;
+    position: relative;
+
+    @include device(l) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+
+    .link-image {
+        @include device(sm) {
+            height: 180px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            @include device(sm) {
+                height: 180px;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+
+    .article-details {
+        padding-right: 30px;
+        padding-bottom: 15px;
+        @include flex(column,
+            space-between,
+            flex-start);
+
+        @include device(l) {
+            padding: 14px;
+
+        }
+
+        .post-data {
+            font-family: Mundial;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 16px;
+            display: block;
+
+            @include device(sm) {
+                margin: 0;
+            }
+        }
+
+        .link-post {
+
+            display: block;
+            margin: 16px 0;
+
+            .post-title {
+                font-family: Henriette;
+                font-size: 2.0rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+            }
+
+            .post-description {
+                font-family: Henriette;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                margin-top: 5px;
+            }
+        }
+
+        .post-time {
+            font-family: Mundial;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            margin-top: auto;
+        }
+    }
+}
+
+.card__sidebar {
+    margin-left: auto;
+    @include flex(column,
+        center,
+        center);
+    width: 224px;
+    background-color: $cores-nautika-primria-branco;
+    border-radius: 10px;
+
+    &.most-read {
+        @include device(sm) {
+            border-radius: 0px;
+            background: transparent;
+
+            .card__sidebar-body {
+                background-color: $cores-nautika-primria-branco;
+                padding: 16px 0;
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    .card__sidebar-header {
+        background-color: $cores-nautika-primria-amarelo;
+        padding: 8px 36px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        color: $cores-nautika-primria-preto;
+        text-align: center;
+        font-family: Henriette;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .card__sidebar-body-content {
+
+        @include flex(row,
+            center,
+            center);
+        gap: 32px;
+        margin: 16px 0;
+    }
+
+    .card__sidebar-btn-link {
+
+        @include flex(row,
+            center,
+            center);
+
+        background-color: $cores-nautika-primria-amarelo;
+
+        margin-bottom: 16px;
+
+
+        font-family: Mundial;
+
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        @include button(192px, 43px, 1px solid $cores-nautika-primria-amarelo, $cores-nautika-primria-preto, $cores-nautika-primria-amarelo, 10px, 1.6rem, normal);
+
+
+        background-image: linear-gradient(-60deg, transparent, transparent 40%,
+                #ffffff44 40%, #ffffff44 60%, transparent 60%,
+                transparent 100%);
+
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        background-position-x: 150%;
+
+        &:hover {
+            background-position-x: -150%;
+            transition: background-position-x 1s;
+        }
+    }
+
+    .card__sidebar-body-content_orange {
+        background-color: $cores-nautika-primria-amarelo;
+        @include flex(column,
+            center,
+            center);
+        padding: 16px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .card__sidebar-text {
+            text-align: center;
+            color: $cores-nautika-primria-branco;
+            font-family: Henriette;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .card__sidebar-link-btn-orange {
+
+            @include button(166px, 39px, 1px solid $cores-nautika-primria-branco, $cores-nautika-primria-branco, $cores-nautika-primria-amarelo, 5px, 1.6rem, normal);
+            font-weight: 600;
+            font-family: Mundial;
+
+
+
+            @include flex(row,
+                center,
+                center);
+            margin-top: 16px;
+
+            background-image: linear-gradient(-60deg, transparent, transparent 40%,
+                    #ffffff44 40%, #ffffff44 60%, transparent 60%,
+                    transparent 100%);
+
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            background-position-x: 150%;
+
+            &:hover {
+                background-position-x: -150%;
+                transition: background-position-x 1s;
+            }
+        }
+    }
+
+    &.most-read {
+
+        @include device(md) {
+            margin-left: 0;
+        }
+
+        @include device(sm) {
+            border: none;
+        }
+
+        .card__sidebar-body-content.article__most-read {
+            @include flex(column,
+                center,
+                center);
+            gap: 0;
+            margin: 0;
+
+            @include device(sm) {
+                display: block;
+                width: 350px;
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 100%;
+
+            }
+
+
+            .card__sidebar-body-content-item {
+                border-bottom: 1px solid #F2F2F2;
+
+                @include device(sm) {
+                    border: none;
+                    width: 350px;
+                    border-right: 1px solid #F2F2F2;
+
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .card__sidebar-body-content-item-link {
+                    padding: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-family: Mundial;
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 14.4px;
+
+
+
+
+                    img {
+
+                        border-radius: 10px;
+                        width: 67px;
+                        height: 57px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.register {
+        @include device(md) {
+
+            .card__sidebar-body-content_orange {
+                width: 100%;
+                flex: 1;
+            }
+
+            .card__siber-img {
+                width: 100%;
+                height: 250px;
+                overflow-y: hidden;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    object-position: center;
+                    flex: 1;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+
+                }
+            }
+        }
+
+        @include device(sm) {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 34px;
+        }
+    }
+
+    &.products {
+        @include device(md) {
+            margin: 0;
+        }
+
+        @include device(sm) {
+            max-height: 295px;
+            width: 167px;
+            padding: 16px 8px 8px 8px;
+
+            .card__sidebar-header {
+                padding: 0;
+
+                background-color: $cores-nautika-primaria-branco;
+                font-size: 1.4rem;
+            }
+
+            .card__sidebar-body {
+                .card__sidebar-body-content {
+                    width: 100%;
+                    margin: 0;
+                    margin: 8px 0;
+                }
+            }
+
+            .card__sidebar-btn-link {
+                width: 100%;
+                padding: 16px 0;
+
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 135px;
+        }
+    }
+}
+
+.card__sidebar-banner {
+    margin-left: auto;
+
+    @include device(sm) {
+        display: none;
+    }
+
+    &.banner-mobile {
+        display: none;
+
+        @include device(sm) {
+            display: block;
+
+            max-height: 295px;
+
+
+            img {
+                height: 100%;
+
+            }
+
+        }
+    }
+}

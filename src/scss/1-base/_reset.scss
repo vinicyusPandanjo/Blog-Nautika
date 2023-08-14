@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "mundial";
+    src: url("../fonts/Fontspring-DEMO-4-mundial-regular-tty.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mundial";
+    src: url("../fonts/Fontspring-DEMO-5-mundial-demibold-tty.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mundial";
+    src: url("../fonts/Fontspring-DEMO-6-mundial-bold-tty.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mundial";
+    src: url("../fonts/Fontspring-DEMO-3-mundial-light-tty.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "henriette";
+    src: url("../fonts/Henriette Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "henriette";
+    src: url("../fonts/Henriette Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body * {
+    font-size: 1.6rem;
+    color: $cores-nautika-cinza-escuro;
+
+}
+
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: #fff;
+    font-family: "henriette";
+
+    &.active-mobile {
+        overflow: hidden;
+    }
+
+
+}
