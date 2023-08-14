@@ -1,5 +1,25 @@
 .article {
     .main {
+        .breadcrumb-item {
+            &:last-child {
+
+
+                @include device(sm) {
+                    overflow: hidden;
+
+                    a {
+
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        position: relative;
+
+
+                    }
+                }
+
+            }
+        }
 
         .post {
             margin-top: 32px;
